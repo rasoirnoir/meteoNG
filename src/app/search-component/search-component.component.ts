@@ -1,5 +1,4 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 
 @Component({
     selector: 'app-search-component',
@@ -8,20 +7,13 @@ import { FormBuilder } from '@angular/forms';
 })
 export class SearchComponentComponent implements OnInit {
 
-    searchForm = this.formBuilder.group({
-        textRecherche: '',
-    });
-
-
     @Output() ville = '';
-    constructor(private formBuilder: FormBuilder) { }
+    constructor() { }
 
     ngOnInit(): void { }
 
+    onClick() {
 
-    onSubmit() {
-
-        window.alert("Coucou je suis à " + this.ville);
     }
 
 }

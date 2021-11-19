@@ -25,12 +25,13 @@ export class MeteoAppComponent implements OnInit {
             .then(jsonResp => {
                 //Jour courant
                 this.detailJourBouchon.name = jsonResp.city_info.name;
-                this.detailJourBouchon.sunrise = `Lever: ${jsonResp.city_info.sunrise}`;
-                this.detailJourBouchon.sunset = `Coucher: ${jsonResp.city_info.sunset}`;
+                this.detailJourBouchon.sunrise = jsonResp.city_info.sunrise;
+                this.detailJourBouchon.sunset = jsonResp.city_info.sunset;
                 this.detailJourBouchon.condition = jsonResp.current_condition.condition;
                 this.detailJourBouchon.icon = jsonResp.current_condition.icon;
-                this.detailJourBouchon.tmp = `${jsonResp.current_condition.tmp}°C`;
+                this.detailJourBouchon.tmp = jsonResp.current_condition.tmp;
 
+                //Jours suivants
                 let indexJour = 1;
                 while(jsonResp[`fcst_day_${indexJour}`] != null) {
                     let dynamismeAlEtatPure = jsonResp[`fcst_day_${indexJour}`];
@@ -41,6 +42,7 @@ export class MeteoAppComponent implements OnInit {
                         tmin: dynamismeAlEtatPure.tmin,
                         tmax: dynamismeAlEtatPure.tmax,
                     });
+                    indexJour++;
                 }
             })
             .catch(error => {
