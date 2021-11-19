@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MeteoAppComponent } from './meteo-app/meteo-app.component';
 import { MeteoJourComponent } from './meteo-jour/meteo-jour.component';
 import { MeteoJourSuivantComponent } from './meteo-jour-suivant/meteo-jour-suivant.component';
+import { SearchComponentComponent } from './search-component/search-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeteoAppComponent,
     MeteoJourComponent,
-    MeteoJourSuivantComponent
+    MeteoJourSuivantComponent,
+    SearchComponentComponent
   ],
   imports: [
     BrowserModule,
