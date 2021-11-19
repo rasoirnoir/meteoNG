@@ -1,0 +1,5 @@
+<app-meteo-jour [detailJour]="detailJourBouchon"></app-meteo-jour>
+
+<div *ngFor="let detail of detailSuivantBouchon">
+  <app-meteo-jour-suivant [detail]="detail"></app-meteo-jour-suivant>
+</div>

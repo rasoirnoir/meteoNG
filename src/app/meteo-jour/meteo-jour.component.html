@@ -1,0 +1,17 @@
+<section id="vignette" *ngIf="detailJour">
+  <div class="infos">
+      <h1 id="ville">{{ detailJour.name }}</h1>
+      <section id="soleil">
+          <p id="lever">{{ detailJour.sunrise }}</p>
+          <p id="coucher">{{ detailJour.sunset }}</p>
+      </section>
+      <section class="prevision">
+          <p id="prev">{{ detailJour.condition }}</p>
+          <img src="{{ detailJour.icon }}" alt="prevision" id="picto">
+          <p id="temperature">{{ detailJour.tmp }}°C</p>
+      </section>
+  </div>
+
+  <!-- spinner -->
+  <!-- <img src="assets/6X5bujz.gif" alt="loading" class="loading"> -->
+</section>

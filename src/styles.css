@@ -1,1 +1,89 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+fieldset{
+  border: 1px, solid;
+  border-radius: 10px;
+  margin: 0.5em;
+  padding: 1em;
+  max-width: 33%;
+}
+
+input{
+  margin: 5px;
+}
+
+img{
+  display: block;
+  width: auto;
+  margin: 0 auto;
+}
+
+.jours{
+  border: 1px solid;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 10px;
+  background-color: #ECEFF1;
+}
+
+.jour_short{
+  font-size: smaller;
+  text-align: right;
+}
+
+.loading{
+  display: block;
+  width: 5em;
+  margin: auto;
+  display: none;
+}
+
+.infos{
+  display: block;
+}
+
+#lblError{
+  display: none;
+  color: red;
+  margin: 5px;
+  font-size: smaller;
+}
+
+#prev3jours{
+  display: flex;
+}
+
+#recherche{
+  margin: 1em;
+}
+
+#vignette{
+  border: 2px solid;
+  width: 14em;
+  padding: 0.5em;
+  border-radius: 10px;
+  margin: 0.5em;
+  background-color: #ECEFF1;
+}
+
+#soleil{
+  margin: 0.5em;
+}
+
+.prevision{
+  align-items: center;
+}
+
+.prevision p{
+  text-align: center;
+}
+
+
+#lever,#coucher{
+  text-align: right;
+}
+

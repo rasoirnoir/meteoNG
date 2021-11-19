@@ -1,0 +1,11 @@
+<section id="jour1" class="jours" *ngIf="detail">
+  <div class="infos">
+      <p id="jourSemaine1" class="jour_short">{{ detail.day_short }}</p>
+      <section class="prevision">
+          <p id="prevJour1">{{ detail.condition }}</p>
+          <img src="{{ detail.icon }}" alt="prevision" id="pictoJour1">
+          <p id="temperatureJour1">{{ detail.tmin }}/{{ detail.tmax }}°C</p>
+      </section>
+  </div>
+  <!-- <img src="assets/6X5bujz.gif" alt="loading" class="loading"> -->
+</section>
